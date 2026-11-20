@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exifclean"
+version = "0.1.0"
+description = "Strip EXIF and other metadata from images. Small CLI built for AI agents."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Alfredo Ramos"}]
+requires-python = ">=3.10"
+dependencies = [
+    "Pillow>=10",
+]
+
+[project.scripts]
+exifclean = "exifclean.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["exifclean*"]
